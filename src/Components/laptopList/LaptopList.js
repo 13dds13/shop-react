@@ -1,11 +1,11 @@
 import React from "react";
 import LaptopListItem from "./laptopListItem/LaptopListItem";
 
-const LaptopList = ({ laptops }) => {
+const LaptopList = ({ laptops, addToCart }) => {
   return (
     <ul>
       {laptops.map((laptop) => (
-        <LaptopListItem laptop={laptop} key={laptop.id} />
+        <LaptopListItem laptop={laptop} key={laptop.id} addToCart={addToCart} />
       ))}
     </ul>
   );

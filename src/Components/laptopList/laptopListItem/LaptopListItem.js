@@ -1,6 +1,7 @@
 import React from "react";
 
-const LaptopListItem = ({ laptop }) => {
+const LaptopListItem = ({ laptop, addToCart }) => {
+  const addProduct = () => addToCart(laptop);
   return (
     <li>
       <h3>{laptop.name}</h3>
@@ -11,6 +12,9 @@ const LaptopListItem = ({ laptop }) => {
       </p>
       <p>{laptop.description}</p>
       <p>Цена: {laptop.price}</p>
+      <button type="button" onClick={addProduct}>
+        Добавить в корзину
+      </button>
     </li>
   );
 };
